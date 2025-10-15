@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medlex-spotter"
+version = "0.1.0"
+description = "Config-driven spotting of medications/terms in free text with fuzzy & phonetic matching, negation and context cues. Streamlit app + CLI."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Mahboubeh Motaghi", email = "mahboubeh.motaghi@gmail.com" }]
+dependencies = [
+  "pandas>=2.0",
+  "pyyaml>=6.0.1",
+  "regex>=2024.5",
+  "rapidfuzz>=3.6",
+   "Metaphone>=0.6",
+  "pytest>=7.4",
+  "pytest-cov>=4.1",
+  "ruff>=0.6.9",
+  "pre-commit>=3.8",
+  "streamlit>=1.37",
+]
+
+[tool.ruff]
+line-length = 100
+
+# I Added THIS so packages are found under src/
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

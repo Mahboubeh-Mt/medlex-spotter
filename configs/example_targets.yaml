@@ -1,0 +1,16 @@
+targets:
+  - canonical: METFORMIN
+    terms: ["metformin", "metfornin", "metforim", "metforman", "met", "metf", "metf.", "glucophage", "glucophage xr", "glumetza", "fortamet"]
+    fuzzy: 85
+    generate_phonetic: true
+  - canonical: INSULIN
+    terms: ["insulin", "ins", "ins.", "ins pen", "insulin pen", "aspart", "lispro", "glargine", "detemir", "degludec", "novorapid", "humalog", "lantus", "levemir", "tresiba"]
+    fuzzy: 85
+    generate_phonetic: true
+
+defaults:
+  dosage_units: "(?:mg|g|iu|units|u)"
+  forms: "(?:tab(?:let)?s?|xr|er|sr|inj|inject(?:ion)?|pen|vial)"
+
+negation:
+  patterns: ["\\b(no|not|without|stop|stopped|discontinued|allergic to|avoid|denies?|denied|denying)\\b"]

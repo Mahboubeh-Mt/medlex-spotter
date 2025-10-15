@@ -1,0 +1,31 @@
+repos:
+  # Ruff (lint + format)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix]          # auto-fix on commit
+      - id: ruff-format        # Black-compatible formatter
+
+  # General hygiene
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-toml
+      - id: check-ast          # python syntax sanity
+      - id: mixed-line-ending  # avoid CRLF surprises
+      - id: debug-statements   # prevent stray print/pdb
+      - id: name-tests-test    # ensures tests are named test_*.py
+      - id: requirements-txt-fixer
+      - id: detect-private-key # safety
+
+  # Optional: JSON prettifier for config files
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+        additional_dependencies: ["prettier@3.3.3"]
+        files: "\\.(json|md|yml|yaml)$"
