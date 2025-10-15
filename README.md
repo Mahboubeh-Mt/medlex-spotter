@@ -1,7 +1,9 @@
 # medlex-spotter 🩺🔎
-![tests](https://img.shields.io/github/actions/workflow/status/Mahboubeh-Mt/medlex-spotter/ci.yml?branch=main)
+ 
+[![tests](https://img.shields.io/github/actions/workflow/status/Mahboubeh-Mt/medlex-spotter/ci.yml?branch=main&cacheSeconds=300)](https://github.com/Mahboubeh-Mt/medlex-spotter/actions/workflows/ci.yml)
 ![license](https://img.shields.io/badge/license-MIT-green)
-![python](https://img.shields.io/badge/python-3.12+-blue)
+![python](https://img.shields.io/badge/python-3.12%2B-blue)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://medlex-spotter-kzednbewx5raqhcs2jaz4b.streamlit.app/)
 
 > Fast, reproducible medication spotting in noisy clinical/free-text (misspellings, abbreviations, and phonetic variants) with context & negation awareness.
 
